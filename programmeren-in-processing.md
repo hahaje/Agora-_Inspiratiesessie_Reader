@@ -46,14 +46,15 @@ De functies die we gaan gebruiken zijn:
 
 > fill(0, 0, 0);
 > circle(50, 50, 50);
+
 > ![image19](images/image19.png)
 >
 > Een rode cirkel wordt dan:
 >
 > fill(255, 0, 0);
->
 > circle(50, 50, 50);
-> ![image20](images/media/image20.png)
+
+> ![image20](images/image20.png)
 
 **circle(x, y, d)** Tekent een cirkel met diameter d op positie (x,y).
 
@@ -75,7 +76,7 @@ Dit zijn voor nu even de belangrijkste bouwstenen voor ons, om een start te make
 
 **imageMode(CENTER)** Zorgt ervoor dat het punt (x,y) precies in het midden van het plaatje is.
 
-In [bijlage D][bijlage-d.md] staan alle functies van Processing die we gaan gebruiken nog iets uitgebreider uitgelegd (vertaling van [Reference Processing](https://processing.org/reference))
+In [Bijlage D](bijlage-d.md) staan alle functies van Processing die we gaan gebruiken nog iets uitgebreider uitgelegd (vertaling van [Reference Processing](https://processing.org/reference))
 
 ## Variabelen
 
@@ -115,13 +116,13 @@ In ons programma declareren we variabelen helemaal boven in het programma, boven
 
 Dus bovenstaande variabele zouden we in ons programma als volgt kunnen definiëren en een waarde geven:
 
+```java
 int leeftijd;
 
 void setup(){
-
-leeftijd = 13;
-
+   leeftijd = 13;
 }
+```
 
 Naast standaard functies heeft Processing ook een aantal handige standaard variabelen. Degene die wij in ons spel gaan gebruiken zijn:
 
@@ -141,13 +142,13 @@ Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook ni
 
 In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
 
-\+ optellen
+\+,  optellen
 
-\- aftrekken
+\-,  aftrekken
 
-/ delen
+/,  delen
 
-\* vermenigvuldigen
+\*,  vermenigvuldigen
 
 Deze werken overigens alleen met getallen. Zo zal **println(10.2 + 3.5)** de volgende regel in de console printen:
 
@@ -217,7 +218,7 @@ Dit levert dezelfde output op, maar is flexibeler in gebruik. Ik hoef dan alleen
 
 ## Condities
 
-Vaak wil je pas iets uitvoeren als er aan een bepaalde voorwaarde (conditie) is voldoen. Processing heeft hiervoor het **if** -- statement.
+Vaak wil je pas iets uitvoeren als er aan een bepaalde voorwaarde (conditie) is voldoen. Processing heeft hiervoor het **if**-statement.
 
 De syntax (schrijfwijze) hiervan is:
 
@@ -312,17 +313,14 @@ Een andere, belangrijke afspraak, die ook de leesbaarheid verhoogt, is het volge
 
 Je hebt in deze reader daar al wel wat voorbeelden van gezien. Bijvoorbeeld bij de draw() en setup(), maar ook bij het if-statement.
 
+```java
 if ( conditie ) {
-
-statement1;
-
-statement2;
-
+   statement1;
+   statement2;
 } else {
-
-statement3;
-
+   statement3;
 }
+```
 
 Zie je dat na een "}" de nieuwe regel begint met een aantal spaties?
 

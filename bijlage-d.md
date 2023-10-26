@@ -2,7 +2,7 @@
 
 Hier vindt je de Nederlandse vertaling van enkele Processing functies uit de Processing Reference ([Reference / Processing.org]).
 
-## setup() {#setup .unnumbered}
+## setup()
 
 **Beschrijving**
 
@@ -20,7 +20,7 @@ Hier vindt je de Nederlandse vertaling van enkele Processing functies uit de Pro
 
 > void
 
-## draw() {#draw .unnumbered}
+## draw()
 
 **Beschrijving**
 
@@ -30,29 +30,25 @@ Hier vindt je de Nederlandse vertaling van enkele Processing functies uit de Pro
 >
 > Het is gebruikelijk om background() aan te roepen aan het begin van de draw() lus om de inhoud van het venster te wissen. Het weglaten van background() kan onbedoelde resultaten opleveren, zoals afbeeldingen de blijven staan en waar vervolgens overheen getekend wordt.
 >
-> Er kan slechts één draw() -functie zijn voor elke programma en draw() moet bestaan als u wilt dat de code continu wordt uitgevoerd of als je gebeurtenissen zoals mousePressed() wilt verwerken. Soms heb je een lege draw() functie nodig om te tekenen in je programma, zoals onderstaand voorbeeld.
->
-> ```java
+> Er kan slechts één draw() -functie zijn voor elke programma en draw() moet bestaan als u wilt dat de code continu wordt uitgevoerd of als je gebeurtenissen zoals mousePressed() wilt verwerken. Soms heb je een lege draw() functie nodig om te tekenen in je programma, zoals onderstaand voorbeeld. In dit voorbeeld wordt er bij elke muisklik een cirkel, met diameter 50, getekend op de plek waar er geklikt is.
+
+
+```java
 void setup() {
    size(200, 200);
 }
-```
->
-> // Ondanks dat de draw() hier leeg is, is die wel nodig, zodat het programma
-> // user input kan verwerken (muiskliks in dit geval).
->
-> ```java
+
+// Ondanks dat de draw() hier leeg is, is die wel nodig, zodat het programma
+// user input kan verwerken (muiskliks in dit geval).
+
 void draw() {
 
 }
-```
-> ```java
+
 void mousePressed() {
    circle(mouseX, mouseY, 50);
 }
 ```
-
-> In dit voorbeeld wordt er bij elke muisklik een cirkel, met diameter 50, getekend op de plek waar er geklikt is.
 
 **Syntax**
 

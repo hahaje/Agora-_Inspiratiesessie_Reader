@@ -1,6 +1,6 @@
 # Uitwerking
 
-De code vind je in [bijlage E][bijlage-e.md].
+De code vind je in [bijlage E](bijlage-e.md).
 
 Zorg ervoor dat je plaatjes in een directory staan met de naam ***data.***
 
@@ -23,11 +23,11 @@ Wanneer je de melding krijgt 'no device detected'. Zet dan, terwijl je mobiel aa
 
 ## Gebruikte plaatjes
 
-![image21](images/media/image21.png)
+![image21](images/image21.png)
 
-![image22](images/media/image22.png)
+![image22](images/image22.png)
 
-![image23](images/media/image23.png)
+![image23](images/image23.png)
 
 
 ## Aanvullingen/uitdagingen

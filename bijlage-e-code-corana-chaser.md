@@ -98,7 +98,6 @@ void draw() {
    //teken held, eerst als cirkel, later als plaatje
    //fill(255, 255, 0);
    //circle(heldXPositie, heldYPositie, heldDiameter);
-
    imageMode(CENTER);
    image(held, heldXPositie, heldYPositie, heldDiameter, heldDiameter);
 

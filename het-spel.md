@@ -37,6 +37,7 @@ Bovenstaand idee gaan jullie zelf stap voor stap uitwerken tijdens deze inspirat
 We starten voor nu even met Processing in de Java modus.
 
 Start Processing en kies voor de Java modus in de rechter bovenhoek:
+
 ![image8](images/image8.png)
 
 Je hebt nu de zogeheten editor gestart, die er als volgt uitziet:

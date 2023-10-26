@@ -6,5 +6,5 @@ Eén van de software programmaatjes om Zip-files is WinRAR. Ga naar <https://www
 
 Na installatie kun je in je windows-verkenner rechtsklikken op de zipfile en dan kiezen voor ***Hier uitpakken.***
 
-![image28](images/media/image28.png)
+![image28](images/image28.png)
 
