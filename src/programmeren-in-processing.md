@@ -12,7 +12,9 @@ Probeer maar.
 
 Type **circle(50, 50, 50);** in de editor en klik op de Run-button. Het resultaat ziet er dan zo uit:
 
-![image17](images/image17.png)
+|Uitvoer|
+|:---:|
+|![image17](images/image17.png)|
 
 Let op de accolade (;) aan het eind van een regel is belangrijk. Zo weet Processing ook dat de regel daar eindigt. Anders leest het gewoon door op de volgende regels, en beschouwt dat dan als 1 lange regel.
 
