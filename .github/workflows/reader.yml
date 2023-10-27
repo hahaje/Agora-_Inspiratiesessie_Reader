@@ -1,0 +1,22 @@
+on: push
+name: ReaderInspiratiessie
+jobs:
+  materialenpubliceren:
+    if: github.ref == 'refs/heads/main' ## Alleen op  de main branch
+    name: Publicatie
+    # needs: kwaliteitscontrole
+    runs-on: ubuntu-latest
+    steps:
+      - name: Broncode ophalen
+        uses: actions/checkout@v3
+      - name: mdBook draaien
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+      - run: mdbook build
+      - run: mv book website
+      - name: Reader Inspiratiessie publiceren als website
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: website/
