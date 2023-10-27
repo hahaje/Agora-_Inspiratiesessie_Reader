@@ -1,0 +1,673 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Reader Inspiratiesessie Progammeren</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="voorblad.html"><strong aria-hidden="true">1.</strong> Voorblad</a></li><li class="chapter-item expanded "><a href="Inleiding.html"><strong aria-hidden="true">2.</strong> Inleiding</a></li><li class="chapter-item expanded "><a href="voorbereiding.html"><strong aria-hidden="true">3.</strong> Voorbereiding</a></li><li class="chapter-item expanded "><a href="beginnen-met-programmeren.html"><strong aria-hidden="true">4.</strong> Beginnen met programmeren</a></li><li class="chapter-item expanded "><a href="het-spel.html"><strong aria-hidden="true">5.</strong> Het spel</a></li><li class="chapter-item expanded "><a href="programmeren-in-processing.html"><strong aria-hidden="true">6.</strong> Programmeren in Processing</a></li><li class="chapter-item expanded "><a href="uitwerking.html"><strong aria-hidden="true">7.</strong> Uitwerking</a></li><li class="chapter-item expanded affix "><li class="part-title">Bijlagen</li><li class="chapter-item expanded "><a href="bijlage-a.html"><strong aria-hidden="true">8.</strong> Bijlage A: Bepalen 64-bit of 32-bit</a></li><li class="chapter-item expanded "><a href="bijlage-b.html"><strong aria-hidden="true">9.</strong> Bijlage B: Zipjes uitpakken</a></li><li class="chapter-item expanded "><a href="bijlage-c.html"><strong aria-hidden="true">10.</strong> Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></li><li class="chapter-item expanded "><a href="bijlage-d.html"><strong aria-hidden="true">11.</strong> Bijlage D: Processing Reference</a></li><li class="chapter-item expanded affix "><li class="part-title">Uitwerking</li><li class="chapter-item expanded "><a href="bijlage-e.html"><strong aria-hidden="true">12.</strong> Bijlage E: Uitwerking in code</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Reader Inspiratiesessie Progammeren</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>#Inspiratiesessie Game Programmeren</p>
+<p>Maken van een game met behulp van Processing , dat uiteindelijk speelbaar is op een Android telefoon.</p>
+<div align="center">
+![image5](images/image5.png)
+</div>
+<p><img src="images/image1.png" alt="image1" /><img src="images/image3.png" alt="image3" /></p>
+<p><img src="images/image2.png" alt="image2" /></p>
+<p>Door: Herman Telman</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inleiding"><a class="header" href="#inleiding">Inleiding</a></h1>
+<p>In deze inspiratiesessie(s) ga je (leren) programmeren m.b.v. van Processing. Dit is een programmeertaal en programmeer-omgeving die gebaseerd is op Java en waarmee op vrij eenvoudige manier, grafische, interactieve programmaatjes (en dus ook games) gemaakt kunnen worden.</p>
+<p>Verder is de ontwikkelomgeving, het programma wat je gebruikt om code te schrijven, vrij eenvoudig en intuïtief.</p>
+<p>En een leuk extraatje is dat je ook, wederom, op een vrij eenvoudige manier, je gemaakte programma/game als een app kunt installeren op een Android mobiel (helaas niet op iPhones ).</p>
+<p>iPhone/iPad gebruikers kunnen wel de <strong>app Processing &amp; p5.js iComplier</strong> uitchecken en kijken wat die te bieden heeft: <a href="https://apps.apple.com/us/app/processing-p5-js-icompiler/id648955851">Processing &amp; p5.js iCompiler</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="voorbereiding"><a class="header" href="#voorbereiding">Voorbereiding</a></h1>
+<p>Voordat je van start kan gaan, moet Processing eerst geïnstalleerd worden op je computer.</p>
+<h2 id="stap-1-processing-downloaden"><a class="header" href="#stap-1-processing-downloaden">Stap 1: Processing downloaden</a></h2>
+<p>Download de laatste versie van Processing (versie 4.0.1) via de volgende link: <a href="https://processing.org/download">https://processing.org/download</a>.</p>
+<p><img src="images/image6.png" alt="image6" /></p>
+<p>Kies de download die geschikt is voor jou operating systeem. In de meeste gevallen is dit Windows. Om te bepalen of je de 64-bit of de 32-bit moet hebben, kun je de instructie in [Bijlage A][bijlage-a.md] raadplegen. In de meeste (nieuwere) laptops is dit 64-bit</p>
+<h2 id="stap-2-zipfile-verplaatsen-van-downloads-naar-map-naar-keuze"><a class="header" href="#stap-2-zipfile-verplaatsen-van-downloads-naar-map-naar-keuze">Stap 2: Zipfile verplaatsen van Downloads naar map naar keuze</a></h2>
+<p>Verplaats de gedownloade Zipfile (<em><strong>processing-4.0.1-windows-x64.zip</strong></em>) naar een map van je keuze, bij voorkeur naar <strong><em>C:\Program Files</em>.</strong> Verplaatsen van een bestand kan door het te verslepen naar de nieuwe directory of door te selecteren en dan <strong>Ctrl-c</strong> en naar de nieuwe directory te gaan en hier <strong>Ctrl-v</strong> doen.</p>
+<h2 id="stap-3-uitpakken-zipfile"><a class="header" href="#stap-3-uitpakken-zipfile">Stap 3: Uitpakken Zipfile</a></h2>
+<p>Pak de Zip file hier uit. Zie [Bijlage B][bijlage-b.md], als je niet weet hoe je dat kunt doen.</p>
+<h2 id="stap-4-starten-processing"><a class="header" href="#stap-4-starten-processing">Stap 4: Starten Processing</a></h2>
+<p>Ga naar de map <em><strong>C:\Program Files\processing-4.0.1.</strong></em></p>
+<p>Om Processing te starten dubbelklikken op <em><strong>processing.exe</strong></em>.</p>
+<p>(Maak er een snelkoppeling van op je Bureaublad, om in vervolg Processing makkelijk op te kunnen starten. Rechtsklik met de muis op de file <em><strong>processing.exe</strong></em> en kies '<em><strong>Kopiëren naar &gt;</strong></em>' en vervolgens '<em><strong>Bureaublad (snelkoppeling maken)</strong></em>')</p>
+<p>Je krijgt een welkom bericht. Zet het vinkje hiervan uit, en klik vervolgens op <em><strong>Get started.</strong></em></p>
+<p>Normaal gezien zou je nu klaar zijn om een game te maken. Maar om uiteindelijk je game op een Android telefoon te kunnen zetten, moet je nog aan aantal extra stappen uitvoeren.</p>
+<h2 id="stap-5-toevoegen-android-modus"><a class="header" href="#stap-5-toevoegen-android-modus">Stap 5: Toevoegen Android Modus</a></h2>
+<p>Klik in de rechterbovenhoek op het vakje met <strong>Java</strong>, kies vervolgens voor <strong>Manage Modes</strong>...</p>
+<p><img src="images/image7.png" alt="image7" />
+<img src="images/image7.png" alt="image8" /></p>
+<p>In het scherm dat vervolgens verschijnt, kies je voor <strong>Anroid Mode for Processing 4</strong>, en klik op de <strong>Install</strong> knop.</p>
+<p><img src="images/image9.png" alt="image9" /></p>
+<h2 id="stap-6-automatische-aanvulling-aanzetten"><a class="header" href="#stap-6-automatische-aanvulling-aanzetten">Stap 6: 'Automatische aanvulling' aanzetten</a></h2>
+<p>Een heel handige optie om aan te zetten is de 'Automatische aanvulling'. Wanneer je dit aanzet kun je wanneer je een gedeelte van een woord hebt getypt, 'ctrl spatie' toetsen, en dan geeft processing een lijstje met mogelijke opties. Dit kan je veel typewerk schelen.</p>
+<p>Om dit in te stellen ga je naar Instellingen: Bestand&gt;Instellingen...</p>
+<p><img src="images/image10.png" alt="image10" /></p>
+<p>Vink de check box bij 'Automatische aanvulling Ctrl-Spatie' aan.</p>
+<p><img src="images/image11.png" alt="image11" /></p>
+<p>Wanneer je nu bv virus typt en dan Ctrl-Spatie, krijg je een lijstje met opties, in dit geval de namen van variabelen. Met de pijltjestoetsen + Enter kun je er 1 kiezen (of aanklikken met de muis)</p>
+<p><img src="images/image12.png" alt="image12" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="beginnen-met-programmeren"><a class="header" href="#beginnen-met-programmeren">Beginnen met programmeren</a></h1>
+<h2 id="wat-is-programmeren"><a class="header" href="#wat-is-programmeren">Wat is programmeren?</a></h2>
+<p><strong>Definitie</strong>: Aan de computer instructies (taken) geven, die de computer begrijpt en vervolgens uitvoert, op het moment dat jij wilt en in de volgorde die jij wilt.</p>
+<p>Hiervoor moet je wel computertaal spreken. Dat is vrij lastig vandaar dat er talen zijn ontwikkeld die makkelijker te begrijpen zijn voor de mens. Deze worden dan omgezet naar taal die de computer begrijpt (Voorbeelden hiervan zijn Java, Python, C#. Maar zo zijn er nog veel meer.)</p>
+<p>In deze workshop wordt Processing gebruikt. Processing is Java met daar bovenop wat extra 'toevoegingen', die het makkelijk maken om snel grafische programmaatjes te schrijven. Op de site van Processing vind je in de zogenaamde Reference alle mogelijkheden die Processing biedt: <a href="https://processing.org/reference">Reference</a>.</p>
+<p>Als je al wat programmeer ervaring hebt of in de toekomst andere talen leert kennen, zul je zien dat er tussen de programmeertalen veel overeenkomsten zijn.</p>
+<h2 id="algoritme"><a class="header" href="#algoritme">Algoritme</a></h2>
+<p>(Zie ook de PowerPoint presentatie)</p>
+<p>Een belangrijk begrip in het programmeren is <strong>algoritme.</strong></p>
+<p>Een algoritme is niet meer dan: een <strong>aantal stappen</strong> die je zet om een bepaald <strong>doel</strong> te bereiken. Een algoritme heeft dus niet per se te maken met grote bergen data en technologie. Een rekensom is een algoritme, maar het bereiden van een maaltijd is dat ook. Je volgt de stappen in een recept om het doel -- eten op tafel -- te bereiken.</p>
+<h2 id="animatie"><a class="header" href="#animatie">Animatie</a></h2>
+<p>(Zie ook de PowerPoint presentatie)</p>
+<p>Definitie animatie: de <strong>illusie</strong> van beweging door het <strong>na elkaar afspelen</strong> van verschillende <strong>stilstaande</strong> beelden.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="het-spel"><a class="header" href="#het-spel">Het spel</a></h1>
+<h2 id="het-idee"><a class="header" href="#het-idee">Het idee</a></h2>
+<p><strong>Corona Chaser</strong></p>
+<p>Je moet proberen aan het corona virus te ontkomen, en ondertussen zoveel mogelijk appeltjes eten, deze leveren punten op. Doel is om zoveel mogelijk punten te scoren, terwijl het corona virus steeds sneller in jouw richting komt. Zodra het corona virus je raakt is het spel afgelopen.</p>
+<h2 id="uitwerking"><a class="header" href="#uitwerking">Uitwerking</a></h2>
+<p><strong>Simpel beginnen</strong></p>
+<p>Eerst zorgen dat alles functioneert, dan mooi maken met leuke plaatjes. In zijn meest simpele vorm ziet het spel er als volgt uit:</p>
+<p><img src="images/image13.png" alt="image13" /></p>
+<p><strong>De score</strong>: het aantal appeltjes dat is gegeten.</p>
+<p><strong>Groene cirkel</strong>: Corona virus. Deze komt automatisch op je af. En gaat steeds sneller bij verstrijken van de tijd.</p>
+<p><strong>Witte cirkel</strong>: onze held, wordt bestuurd door middel van de muis (Op een mobiel zal dat via touch werken).</p>
+<p>Als onze held in aanraking komt met het virus (botst), is hij dood en eindigt het spel.</p>
+<p>Als onze held in aanraking komt met een appeltje gaat de score omhoog.</p>
+<p><strong>Rode cirkel</strong>: appeltje, deze verschijnt (spawned) op een willekeurige plek. Wanneer de held een appeltje 'opeet', verschijnt er onmiddellijk een nieuw appeltje op een willekeurige plek en wordt de score met 1 verhoogd.</p>
+<p><strong>Knop</strong> om spel opnieuw te spelen. Kun je op klikken met de muis (Op een mobiel zal dat via touch werken). Deze knop verschijnt wanneer het Game Over is.</p>
+<p>Je zult zien dat het spel mooi maken (met leuke plaatjes), uiteindelijk helemaal niet zo moeilijk meer is.</p>
+<p>Bovenstaand idee gaan jullie zelf stap voor stap uitwerken tijdens deze inspiratiesessie(s).</p>
+<h2 id="aanpak"><a class="header" href="#aanpak">Aanpak</a></h2>
+<p>We starten voor nu even met Processing in de Java modus.</p>
+<p>Start Processing en kies voor de Java modus in de rechter bovenhoek:</p>
+<p><img src="images/image8.png" alt="image8" /></p>
+<p>Je hebt nu de zogeheten editor gestart, die er als volgt uitziet:</p>
+<p><img src="images/image14.png" alt="image14" /></p>
+<p>Klik op de Run-knop. Als het goed is verschijnt ongeveer midden in je scherm het volgende venster. Dit is het venster waarin je game zich gaat afspelen (wat de speler dus te zien krijgt)</p>
+<p><img src="images/image15.png" alt="image15" /></p>
+<p>Dus zonder dat we nog maar 1 regel code hebben geschreven, gebeurt er toch al heel wat op de achtergrond. Wat je ziet is een venster met daarin een vierkant van 100 x 100 pixels groot. En wat je niet ziet, en toch gebeurt, is dat dit venster 60 keer per seconde opnieuw wordt getekend.</p>
+<p>Dit venster moet dus uiteindelijk ons spel worden!</p>
+<p>We moeten dus code-regels schrijven in de editor zodanig dat we uiteindelijk ons idee van de game kunnen realiseren. Om dat te kunnen doen moeten we eerst gaan bedenken welke stappen in welke volgorde we moeten gaan zetten om ons doel (game) te bereiken. Oftewel we moeten een <strong>algoritme</strong> bedenken.</p>
+<p>Er zijn meerdere wegen die naar Rome leiden, dus er is geen sprake van hét (juiste) algoritme. Ook kan het zijn dat het algoritme wat je hebt bedacht in de praktijk niet altijd handig is. Meestal gaat het dan om de volgorde van de stappen. Dus een algoritme helpt je, maar is niet heilig.</p>
+<h2 id="algoritme-1"><a class="header" href="#algoritme-1">Algoritme</a></h2>
+<ol>
+<li>
+<p>Maak het scherm 400 x 800 pixels</p>
+</li>
+<li>
+<p>Schrijf een tekst in linker-boven hoek met de score.</p>
+</li>
+<li>
+<p>Teken een groene cirkel (het coronavirus) op een bepaalde*) positie.</p>
+</li>
+<li>
+<p>Teken een gele cirkel (de held) op de positie waar de muis staat (later: waar het scherm wordt aangeraakt op de mobiel)</p>
+</li>
+<li>
+<p>Teken een rode cirkel (de appel) op een bepaalde*) positie.</p>
+</li>
+<li>
+<p>Als held de appel raakt dan score met 1 ophogen, appel 'spawnen' op een nieuwe willekeurige positie. Spawnen betekent niets meer dan nieuwe coordinaten bepalen voor de appel.</p>
+</li>
+<li>
+<p>Check of coronavirus botst met de held (= gele cirkel raakt groene cirkel) . Als dat zo is dan game-over.</p>
+</li>
+<li>
+<p>Als game-over dan schrijf de tekst &quot;Game Over&quot; in het midden van het scherm.</p>
+</li>
+<li>
+<p>Als game-over, teken een knop (rechthoek met afgeronde hoeken) onderin het scherm (op ongeveer 1/10^de^ vanaf onderrand in het midden) met de tekst &quot;try again&quot; erin.</p>
+</li>
+<li>
+<p>Laat het coronavirus een stap richting de held zetten.</p>
+</li>
+<li>
+<p>Als game-over en er is op de &quot;try again&quot; button geklikt dan start het spel opnieuw.</p>
+</li>
+</ol>
+<p>Stappen 2 t/m 11 worden elke keer uitgevoerd voordat het scherm wordt ververst. Dit betekent dat dit ongeveer 60 keer per seconde gebeurt.</p>
+<p>*) Met bepaalde positie wordt in het geval van het coronavirus bedoelt dat elke keer als het scherm ververst wordt het virus een stap in de richting van de held zet. In het geval van de appel wordt de positie random bepaalt bij het spawnen van de appel. Deze positie houdt hij totdat hij opgegeten wordt en er een nieuwe appel gespawned wordt met een random nieuwe positie.</p>
+<p>In onderstaand plaatje zijn wat afmetingen getekend, die kunnen ons helpen om verschillende onderdelen op de juiste plek te tekenen.</p>
+<p><img src="images/image16.png" alt="image16" /></p>
+<p>Belangrijk om op te merken dat de linker boven hoek het nulpunt is (0,0) en dat de positieve x-richting naar rechts is en de positieve y-richting naar beneden. Dit in tegenstelling tot een wiskundig assenstelsel, waarin het nulpunt links onder is en de positieve y-richting naar boven.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="programmeren"><a class="header" href="#programmeren">Programmeren</a></h1>
+<h2 id="functies"><a class="header" href="#functies">Functies</a></h2>
+<p>Zoals eerder gezegd hoef je veel dingen niet helemaal zelf te programmeren. Processing heeft al een hele hoop standaard 'dingen' beschikbaar. In de Reference (<a href="https://processing.org/reference">Reference</a>) vind je deze terug.</p>
+<p>Deze 'dingen' worden functies genoemd. Een functie is eigenlijk 1 of meer instructies die samen een bepaalde handeling uitvoeren. Het is makkelijker om dit duidelijk te maken met een voorbeeld.</p>
+<p>Neem bijvoorbeeld de functie <strong>circle(x, y, d)</strong>. Deze functie tekent een cirkel met als middelpunt (x,y) en diameter d.</p>
+<p>Probeer maar.</p>
+<p>Type <strong>circle(50, 50, 50);</strong> in de editor en klik op de Run-button. Het resultaat ziet er dan zo uit:</p>
+<p><img src="images/image17.png" alt="image17" /></p>
+<p>Let op de accolade (;) aan het eind van een regel is belangrijk. Zo weet Processing ook dat de regel daar eindigt. Anders leest het gewoon door op de volgende regels, en beschouwt dat dan als 1 lange regel.</p>
+<p>Er wordt een cirkel met straal 50 getekend, precies midden in het venster.</p>
+<p>Om de kleur en de rand van de cirkel te veranderen, bestaan er andere functies die dit voor je kunnen doen. Hierover later meer.</p>
+<p>Door andere waarden mee te geven, kun je cirkels van verschillende groottes en op verschillende posities tekenen. Aan deze functies kun je dus zelf <strong>niets</strong> veranderen door instructies toe te voegen.</p>
+<p>Processing heeft ook een aantal functies die je wel zelf invulling moet geven. De belangrijkste 2 functies zijn de <strong>setup()</strong> en de <strong>draw().</strong> Deze worden door Processing zelf aangeroepen, bij het starten en runnen van het programma. De setup() word eerst, eenmalig, uitgevoerd, hierin kun je dus dingen doen die eenmalig uitgevoerd moeten worden, zoals de grootte van het scherm opgeven. De draw() zorgt voor het tekenen van het venster, deze wordt dus 60 keer per seconde uitgevoerd. In de schermafbeelding op de volgende bladzijde zie je hoe dat eruit ziet.</p>
+<p>Wat er binnen deze functies uitgevoerd wordt, dat moeten we zelf programmeren. In deze functies komt het grootste gedeelte van ons algoritme terecht.</p>
+<p><img src="images/image18.png" alt="image18" /></p>
+<p>De functies die we gaan gebruiken zijn:</p>
+<p><strong>size(b, h)</strong> Geeft het venster de breedte b en de hoogte h.</p>
+<p><strong>background(r, g, b)</strong> Geeft de achtergrond van het venster een rgb kleur (rgb staat voor: red, green, blue). De r,g en b waarde is een getal tussen de 0 en 255. En geeft de mate aan waarin de kleuren rood, groen en blauw in het kleurmengsel aanwezig zijn. Dus 0,0,0 is zwart (afwezigheid van alle kleuren) en 255,255,255 is wit (aanwezigheid van alle kleuren in maximale hoeveelheid).</p>
+<p><strong>text(&quot;text&quot;, x, y)</strong> Print de tekst &quot;text&quot; op positie (x,y)</p>
+<p><strong>textSize(s)</strong> Zet de lettergrootte op <strong>s</strong> pixels</p>
+<p><strong>textAlign(LEFT)</strong> Zorgt ervoor dat de tekst links wordt uitgelijnd. Dit betekent in dit geval dat de tekst begint op positie (x,y) en dan naar rechts wordt geschreven. Let op: LEFT moet ook echt in hoofdletters geschreven worden.</p>
+<p><strong>textAlign(CENTER, CENTER)</strong> Zorgt ervoor dat een tekst zodanig geschreven wordt dat het punt (x,y) precies in het midden/centrum van de tekst is.</p>
+<p><strong>fill(r, g, b)</strong> Deze functie bepaalt de kleur waarmee de daaropvolgende figuur of tekst wordt geschreven. Dus als je een zwarte cirkel wilt tekenen midden in het standaard scherm dan wordt het:</p>
+<blockquote>
+<p>fill(0, 0, 0);
+circle(50, 50, 50);</p>
+</blockquote>
+<blockquote>
+<p><img src="images/image19.png" alt="image19" /></p>
+<p>Een rode cirkel wordt dan:</p>
+<p>fill(255, 0, 0);
+circle(50, 50, 50);</p>
+</blockquote>
+<blockquote>
+<p><img src="images/image20.png" alt="image20" /></p>
+</blockquote>
+<p><strong>circle(x, y, d)</strong> Tekent een cirkel met diameter d op positie (x,y).</p>
+<p><strong>rect(x, y, b, h, r)</strong> Tekent een rechthoek met de linker-boven hoek op positie (x,y) en een breedte b en hoogte h. De r geeft de ronding van de hoeken aan (0 is een rechte hoek)</p>
+<p><strong>rectMode(CENTER)</strong> Zorgt ervoor dat het punt (x,y) precies in het midden(centrum) van de rechthoek uitgelijnd wordt. Vergelijkbaar met textMode(CENTER, CENTER).</p>
+<p><strong>random(min, max)</strong> Deze functie geeft een willekeurig getal terug tussen de waarden min en max. B.v. zou random(0, 10) het getal 4,15389 terug kunnen geven. Maar als ik hetzelfde nog een keer uitvoer kan er een heel ander getal uitkomen. Niet te voorspellen dus, oftewel willekeurig (= random).</p>
+<p><strong>millis()</strong> Bepaalt het aantal verstreken milliseconden sinds het opstarten van het spel.</p>
+<p><strong>dist(x1, y1, x2, y2)</strong> Berekent de afstand tussen de punten (x1,y1) en (x2,y2)</p>
+<p>Dit zijn voor nu even de belangrijkste bouwstenen voor ons, om een start te maken met ons spel. Later zullen we de cirkels gaan vervangen door plaatjes (images), m.b.v. de volgende functies.</p>
+<p><strong>image(img, x, y, h, b)</strong> Tekent het plaatje <strong>img</strong> op positie (x, y) met een hoogte van h en een breedte van b.</p>
+<p><strong>loadImage(&quot;filename.png&quot;)</strong> Laadt een afbeelding/plaatje in. Deze is van het type png, gif of jpg.</p>
+<p><strong>imageMode(CENTER)</strong> Zorgt ervoor dat het punt (x,y) precies in het midden van het plaatje is.</p>
+<p>In <a href="bijlage-d.html">Bijlage D</a> staan alle functies van Processing die we gaan gebruiken nog iets uitgebreider uitgelegd (vertaling van <a href="https://processing.org/reference">Reference Processing</a>)</p>
+<h2 id="variabelen"><a class="header" href="#variabelen">Variabelen</a></h2>
+<p>Een ander belangrijk bergrip in programmeren zijn variabelen. Soms heb je een bepaalde (berekende) waarde meer dan één keer nodig in je programma. In dat geval kun je -- i.p.v. die waarde steeds opnieuw te berekenen -- de waarde opslaan in een variabele en dan gewoon de naam van de variabele gebruiken. Technisch gezien is een variabele een plekje in het geheugen van de computer die je zelf een (duidelijke en logische) naam kunt geven en waar je vervolgens een waarde aan kunt geven, en deze waarde kun je vervolgens ook wijzigen. Om je daar een voorstelling van te kunnen maken, zou je een variabele kunnen zien als een doosje waar je een bepaalde waarde instopt en die je er ook weer uit kunt halen en zelfs wijzigen.</p>
+<p>Een variabele maken, noemen we '<strong>declareren</strong>'. Je moet de computer laten weten hoe je variabele moet gaan heten. Een variabele een waarde geven noemen we <strong>'initialiseren'</strong>.</p>
+<p>In veel programmeertalen moet je ook aangeven wat het zogeheten <strong>type</strong> van de variabele is. Is het een geheel getal, of een komma-getal, of een tekst? Dit zijn veel voorkomende types, maar je kunt ook variabelen maken die een plaatje kunnen bevatten.</p>
+<p>De types die wij gaan gebruiken voor het spel zijn:</p>
+<ul>
+<li>
+<p><strong>int</strong> hier kunnen gehele getallen (integers) in.</p>
+</li>
+<li>
+<p><strong>float</strong> voor komma-getallen.</p>
+</li>
+<li>
+<p><strong>String</strong> voor tekst.</p>
+</li>
+</ul>
+<blockquote>
+<p>Let op: Processing is hoofdletter gevoelig, als je <strong>Int</strong> zou schrijven i.p.v. <strong>int</strong>, dan krijg je een foutmelding. <strong>String</strong> wordt, anders dan de andere types, met een hoofdletter geschreven. Dit is dus geen typefout. Waarom dit zo is, is op dit moment niet zo belangrijk.</p>
+</blockquote>
+<ul>
+<li><strong>boolean</strong> deze kan 2 waarden bevatten, <strong>true</strong> of <strong>false</strong> (waar of nietwaar). Een beetje</li>
+</ul>
+<blockquote>
+<p>een vreemde variabele misschien, maar deze is enorm handig in situaties, waarbij je afhankelijk van of iets waar of nietwaar is, iets wel of juist niet wil doen.</p>
+</blockquote>
+<ul>
+<li><strong>Pimage</strong> hier kun je plaatjes in opslaan.</li>
+</ul>
+<p>Je kunt nu bijvoorbeeld een variabele <strong>leeftijd</strong> maken, waar je je leeftijd in op kan slaan (b.v. 13). Dit kun je als volgt doen:</p>
+<p><strong>int leeftijd;</strong> met deze regel declareer je de variabele</p>
+<p><strong>leeftijd = 13;</strong> hier geef je de variabele een waarde</p>
+<p>Dit kan ook in 1 keer:</p>
+<p><strong>int leeftijd = 13;</strong></p>
+<p>In ons programma declareren we variabelen helemaal boven in het programma, boven de <strong>void setup()</strong>. In de <strong>setup()</strong> zelf geven we onze variabelen een start-waarde.</p>
+<p>Dus bovenstaande variabele zouden we in ons programma als volgt kunnen definiëren en een waarde geven:</p>
+<pre><code class="language-java">int leeftijd;
+
+void setup(){
+   leeftijd = 13;
+}
+</code></pre>
+<p>Naast standaard functies heeft Processing ook een aantal handige standaard variabelen. Degene die wij in ons spel gaan gebruiken zijn:</p>
+<p><strong>width</strong> hierin is de breedte van het venster opgeslagen</p>
+<p><strong>height</strong> hierin is de hoogte van het venster opgeslagen</p>
+<p><strong>mouseX</strong> hierin is de x-positie van de muis-cursor (pijltje) opgeslagen</p>
+<p><strong>mouseY</strong> hierin is de y-positie van de muis-cursor (pijltje) opgeslagen</p>
+<p><strong>mousePressed</strong> hierin is opgeslagen of je de linker muis knop hebt ingedrukt of niet. Deze heeft dus de waarde <strong>true</strong> (er is op de linker button geklikt) of <strong>false</strong> (er is niet geklikt).</p>
+<p>Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook niet bovenin je programma op te schrijven.</p>
+<h2 id="wiskundige-operatoren"><a class="header" href="#wiskundige-operatoren">Wiskundige operatoren</a></h2>
+<p>In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:</p>
+<p>+,  optellen</p>
+<p>-,  aftrekken</p>
+<p>/,  delen</p>
+<p>*,  vermenigvuldigen</p>
+<p>Deze werken overigens alleen met getallen. Zo zal <strong>println(10.2 + 3.5)</strong> de volgende regel in de console printen:</p>
+<p><strong>13.7</strong></p>
+<p>Je kan natuurlijk ook berekening uitvoeren met variabelen, deze moeten dan wel van het type <strong>int</strong> of <strong>float</strong> zijn (er zijn nog meer standaard typen die getallen kunnen bevatten, maar die laten we even buiten beschouwing).</p>
+<p>De volgende code:</p>
+<p><strong>float getal1 = 10.2;</strong></p>
+<p><strong>float getal2 = 3.2;</strong></p>
+<p><strong>println(getal1 + getal2);</strong></p>
+<p>Levert dezelfde output op:</p>
+<p><strong>13.7</strong></p>
+<p>Zoals gezegd werk dit dus alleen met getallen. Een uitzondering is de + operator. Deze werkt ook op strings en variabelen van het type <strong>String.</strong> Het effect hiervan is dat de teksten die 'opgeteld' worden, als het ware aan elkaar 'geplakt' worden. Even een voorbeeld:</p>
+<p><strong>println(&quot;Hello&quot; + &quot;World&quot;);</strong></p>
+<p>levert als output in de console:</p>
+<p><strong>HelloWorld</strong></p>
+<p>Let op: Zoals je ziet zonder spatie!</p>
+<p>Met variabelen, zou het als volgt eruit kunnen zien:</p>
+<p><strong>String groet = &quot;Hello&quot;;</strong></p>
+<p><strong>String iedereen = &quot;World&quot;;</strong></p>
+<p><strong>println(groet + iedereen);</strong></p>
+<p>Dit levert dezelfde output op:</p>
+<p><strong>HelloWorl</strong>d</p>
+<p>Wil je een spatie tussen de woorden dan zal je die zelf moeten toevoegen, bijvoorbeeld als volgt:</p>
+<p><strong>println(&quot;Hello&quot; + &quot; &quot; + &quot;World&quot;);</strong></p>
+<p>of</p>
+<p><strong>println(groet + &quot; &quot; + iedereen);</strong></p>
+<p>Dit werkt ook met combinaties van Strings en integer:</p>
+<p><strong>println(&quot;Mijn leeftijd is: &quot; + 13);</strong></p>
+<p>levert op</p>
+<p><strong>Mijn leeftijd is: 13</strong></p>
+<p>Mooier is natuurlijk om dit behulp van een variabele te doen, dus:</p>
+<p><strong>int leeftijd;</strong></p>
+<p><strong>leeftijd = 13;</strong></p>
+<p><strong>println(&quot;Mijn leeftijd is: &quot; + leeftijd);</strong></p>
+<p>Dit levert dezelfde output op, maar is flexibeler in gebruik. Ik hoef dan alleen de waarde van de variabele <strong>leeftijd</strong> te wijzigen, om een andere zin te printen.</p>
+<h2 id="condities"><a class="header" href="#condities">Condities</a></h2>
+<p>Vaak wil je pas iets uitvoeren als er aan een bepaalde voorwaarde (conditie) is voldoen. Processing heeft hiervoor het <strong>if</strong>-statement.</p>
+<p>De syntax (schrijfwijze) hiervan is:</p>
+<pre><code class="language-java">if ( conditie ) {
+   statement1;
+   statement2;
+   //etc...
+}
+</code></pre>
+<p>Let hier op de () en {}, deze zijn verplicht!</p>
+<p>Je kan deze if lezen als: <strong>ALS</strong> conditie waar is <strong>DAN</strong> voer de statements uit.</p>
+<p>Een voorbeeld. Stel ik heb een spel waarin de speler een aantal levens heeft. Als deze op zijn dan is het spel voorbij en wordt er &quot;Game Over&quot; in het midden van het scherm geprint. Het aantal levens hou ik bij in een variabele met de naam <strong>aantalLevens</strong>.</p>
+<p>Dan zou ik het bovenstaande als volgt kunnen programmeren:</p>
+<pre><code class="language-java">if (aantalLevens == 0) {
+   text(&quot;Game Over&quot;, width / 2, height / 2);
+}
+</code></pre>
+<p>Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot de enkele =, die gebruikt wordt om een 'waarde toe te kennen' aan een variabele.</p>
+<p>De volgende vergelijkingen zijn beschikbaar:</p>
+<p>== is gelijk aan</p>
+<p>&lt; is kleiner dan</p>
+<p>&gt; is groter dan</p>
+<p>&lt;= is kleiner of gelijk</p>
+<p>&gt;= is groter of gelijk</p>
+<p>!= is ongelijk aan (de ! kun je lezen als 'is niet')</p>
+<p>Ook is het mogelijk om het if -- statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.</p>
+<pre><code class="language-java">if ( conditie ) {
+   statement1;
+   statement2;
+} else {
+   statement3;
+}
+</code></pre>
+<p>Dit kan je lezen als: <strong>ALS</strong> conditie waar is <strong>DAN</strong> voer de statement1 en statement2 uit <strong>ANDERS</strong> voer statement3 uit.</p>
+<p>Als je meerdere condities hebt die moeten gelden, kun je deze 'koppelen' door er &amp;&amp; (en) tussen te zetten of || (of). De '|' zit op je toetsenbord, rechts, boven de Enter toets.</p>
+<pre><code class="language-java">if (conditie1 &amp;&amp; conditie2){
+   statement1;
+}
+</code></pre>
+<p>Dit kun je lezen als: <strong>ALS</strong> conditie1 <strong>EN</strong> conditie2 waar zijn <strong>DAN</strong> voer statement1 uit.</p>
+<pre><code class="language-java">if (conditie1 || conditie2){
+   statement1;
+}
+</code></pre>
+<p>Dit kun je lezen als: <strong>ALS</strong> conditie1 <strong>OF</strong> conditie2 waar is <strong>DAN</strong> voer statement1 uit.</p>
+<h2 id="standaarden-afspraken"><a class="header" href="#standaarden-afspraken">Standaarden/ Afspraken</a></h2>
+<p>In de wereld van de programmeurs is het gebruikelijk om bepaalde standaarden af te spreken, hoe je code schrijft. Enkele afspraken zijn:</p>
+<p>Variabelen worden in zogeheten camelCase geschreven. Dit betekent dat een naam van variabele altijd begint met een kleine letter en dat vervolgens ieder zelfstandig naamwoord in die naam begint met een hoofdletter, bijvoorbeeld</p>
+<p>int diameterCirkel;</p>
+<p>float gespaardBedrag;</p>
+<p>Ook is het belangrijk om duidelijke namen te kiezen, bij voorkeur namen die iets zeggen over de waarde die je erin stopt. Zoals bovenstaande voorbeelden.</p>
+<p>Verder is het voor de leesbaarheid van je code belangrijk dat je af en toe wat lege regels toevoegt, na bijvoorbeeld een if-statement of voor en na de setup() en draw().</p>
+<p>Voeg spaties toe na een komma, voor en na de &quot;=&quot;, voor en na een wiskundige operator (b.v. &quot;+&quot;). Dit verhoogt ook de leesbaarheid van je code.</p>
+<p>Code die heel compact geschreven is, dus zonder spaties en lege regels, is vaak moeilijker te lezen.</p>
+<p>Een andere, belangrijke afspraak, die ook de leesbaarheid verhoogt, is het volgende. Na een &quot;{&quot; begin je de volgende regel met inspringen. Dat wil zeggen dat je een aantal spaties toevoegt vóór de regel, meestal 3.</p>
+<p>Je hebt in deze reader daar al wel wat voorbeelden van gezien. Bijvoorbeeld bij de draw() en setup(), maar ook bij het if-statement.</p>
+<pre><code class="language-java">if ( conditie ) {
+   statement1;
+   statement2;
+} else {
+   statement3;
+}
+</code></pre>
+<p>Zie je dat na een &quot;}&quot; de nieuwe regel begint met een aantal spaties?</p>
+<p>Merk op dat bij een &quot;}&quot; er weer van voren af aan begonnen wordt met de regel.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uitwerking-1"><a class="header" href="#uitwerking-1">Uitwerking</a></h1>
+<p>De code vind je in <a href="bijlage-e.html">bijlage E</a>.</p>
+<p>Zorg ervoor dat je plaatjes in een directory staan met de naam <em><strong>data.</strong></em></p>
+<p>Let op: dit is een mogelijke uitwerking en niet persé de enige juiste uitwerking. Sterker zelfs, ik denk dat als ik het nog een keer zou uitwerken, het er dan hoogstwaarschijnlijk anders zou hebben uitgezien: andere namen, andere volgorde etc. Dat is heel gebruikelijk als je programmeert. Je probeert continu je code steeds 'beter' te maken: duidelijkere namen, makkelijker aan te passen/ uit te breiden etc.</p>
+<h2 id="android-modus"><a class="header" href="#android-modus">Android modus</a></h2>
+<p>Als je tevreden bent met het resultaat, wordt het tijd om te gaan kijken hoe het er uit ziet op je mobiel. Hiervoor moeten we een paar kleine aanpassingen in de code aanbrengen. In de <strong>setup()</strong> moet de <strong>size(400,800)</strong> weggehaald worden. Je kan dit doen door er commentaar van te maken door er // voor te zetten. Processing zal deze regels dan negeren.</p>
+<p>In plaats hiervan zet je de volgende 2 regels in de setup();</p>
+<p>fullScreen();</p>
+<p>orientation(PORTRAIT);</p>
+<p>Save je programma en selecteer in de rechter bovenhoek de <strong>Android</strong> modus. Wanneer je nu over de 'play' button hoovert, zie je de tekst 'Run on device'. Sluit nu je mobiel aan op je laptop met je usb-kabel (Zorg dat je de ontwikkelaarsopties hebt aangezet, zie [<strong>Bijlage C</strong>][26]). Als je nu op de play-button klikt, zal Processing je programma naar je telefoon sturen/installeren en starten.</p>
+<p>Wanneer je de melding krijgt 'no device detected'. Zet dan, terwijl je mobiel aan je computer hangt, de ontwikkelaarsopties een keer uit en weer aan. Wellicht moet je dan ook nog op je mobiel toestemming geven aan je laptop om bestanden over te zetten.</p>
+<h2 id="gebruikte-plaatjes"><a class="header" href="#gebruikte-plaatjes">Gebruikte plaatjes</a></h2>
+<p><img src="images/image21.png" alt="image21" /></p>
+<p><img src="images/image22.png" alt="image22" /></p>
+<p><img src="images/image23.png" alt="image23" /></p>
+<h2 id="aanvullingenuitdagingen"><a class="header" href="#aanvullingenuitdagingen">Aanvullingen/uitdagingen</a></h2>
+<ol>
+<li>
+<p>Zorg dat de held altijd <strong>helemaal</strong> binnen het scherm blijft.</p>
+</li>
+<li>
+<p>Hou een highscore bij:</p>
+<p>a.  Zet de highscore in de regel met de score</p>
+<p>b.  Voor het bewaren en ophalen van de highscore kun je gebruik maken van de <em>loadStrings()</em> en <em>saveStrings()</em> functies van Processing</p>
+</li>
+<li>
+<p>Maak van het spawnen van de appel een functie spawnAppel(), en gebruik deze 2 keer, in plaats van de gecopieerde code.</p>
+</li>
+<li>
+<p>Zelfde geldt voor het instellen van de variabelen bij de start van het spel (in de setup()) en bij het drukken op de &quot;Try again&quot; button. Maak hiervoor een functie initialiseerSpel() en roep deze op de 2 betreffende plaatsen aan.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-a-bepalen-64-bit-of-32-bit" class="unnumbered"><a class="header" href="#bijlage-a-bepalen-64-bit-of-32-bit">Bijlage A: Bepalen 64-bit of 32-bit</a></h1>
+<p>Ga naar de <em><strong>Instellingen</strong></em> op je computer:</p>
+<p><img src="images/image24.png" alt="image24" /></p>
+<p>In het <em><strong>Instellingenscherm</strong></em> vervolgens kiezen voor <em><strong>Info</strong></em>. Hier vind je bij het <em><strong>Type systeem</strong></em> of je een 64-bit of een 32-bit machine hebt. In de meeste gevallen al dit tegenwoordig 64-bit zijn.</p>
+<p><img src="images/image25.png" alt="image25" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-b-zipjes-uitpakken." class="unnumbered"><a class="header" href="#bijlage-b-zipjes-uitpakken.">Bijlage B: Zipjes uitpakken.</a></h1>
+<p>Eén van de software programmaatjes om Zip-files is WinRAR. Ga naar <a href="https://www.winrar.nl/">https://www.winrar.nl/</a>. Download hier de versie die geschikt is voor je operating systeem.</p>
+<p><img src="images/image26.png" alt="image26" /></p>
+<p>Na installatie kun je in je windows-verkenner rechtsklikken op de zipfile en dan kiezen voor <em><strong>Hier uitpakken.</strong></em></p>
+<p><img src="images/image28.png" alt="image28" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-c-ontwikkelaarsopties-instellen-op-je-telefoon" class="unnumbered"><a class="header" href="#bijlage-c-ontwikkelaarsopties-instellen-op-je-telefoon">Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></h1>
+<p>Om een spelletje meteen van je computer op je telefoon te kunnen zetten, zonder app-store, moet je de <em><strong>Ontwikkelaarsopties</strong></em> activeren op je telefoon.</p>
+<p>De manier waarop je dit precies doet kan van merk tot merk verschillen. Hieronder staat de manier beschreven voor de Samsung Galaxy. Mocht je een ander type telefoon hebben, dan kan het zijn dat het iets anders in zijn werk gaat. In dat geval moet je even op internet zoeken naar de steekwoorden: Ontwikkelaarsopties, &lt;jouw merk/model telefoon&gt;.</p>
+<p>Voor een Samsung Galaxy:</p>
+<ul>
+<li>
+<p>Open de <em><strong>Instellingen</strong></em> van je telefoon</p>
+</li>
+<li>
+<p>Ga naar <em><strong>Info telefoon</strong></em></p>
+</li>
+<li>
+<p>Selecteer <em><strong>Software gegevens</strong></em></p>
+</li>
+<li>
+<p>Zoek naar de informatie over het <em><strong>Buildnummer</strong></em></p>
+</li>
+<li>
+<p>Druk 7x op deze informatie (geen grap )</p>
+</li>
+<li>
+<p>Na 7x krijg je een melding dat de <em><strong>Ontwikkelaarsopties</strong></em> zijn ingeschakeld.</p>
+</li>
+<li>
+<p>Het kan zijn dat er nu om je pincode gevraagd wordt, deze moet je dan invoeren.</p>
+</li>
+<li>
+<p>Als je nu weer naar de <em><strong>Instellingen</strong></em> gaat, zie je dat er een optie <em><strong>Ontwikkelaarsopties</strong></em> is bijgekomen onderaan de lijst.</p>
+</li>
+<li>
+<p>Selecteer de <em><strong>Ontwikkelaarsopties</strong></em> en zoek naar de <em><strong>USB-foutopsporing</strong></em> optie en zet deze aan.</p>
+</li>
+<li>
+<p>Dat is alles, verder hoef je <strong>hier niks te veranderen</strong>. Ik zou dat ook niet aanraden, geen idee wat het allemaal inhoud.</p>
+</li>
+<li>
+<p>Het advies is om deze opties weer uit te zetten, zodra je klaar bent met installeren van je spel.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-d-processing-reference" class="unnumbered"><a class="header" href="#bijlage-d-processing-reference">Bijlage D: Processing Reference</a></h1>
+<p>Hier vindt je de Nederlandse vertaling van enkele Processing functies uit de Processing Reference ([Reference / Processing.org]).</p>
+<h2 id="setup"><a class="header" href="#setup">setup()</a></h2>
+<p><strong>Beschrijving</strong></p>
+<blockquote>
+<p>De functie setup() wordt eenmalig uitgevoerd wanneer het programma wordt gestart. Het wordt gebruikt om initiële eigenschappen zoals schermgrootte te definiëren en om media zoals afbeeldingen en lettertypen te laden wanneer het programma wordt gestart. Er kan slechts één functie setup() zijn voor elk programma. setup() wordt automatisch aangeroepen en mag nooit expliciet worden aangeroepen.</p>
+<p>Als de schets een andere dimensie heeft dan de standaardinstelling, moet de functie size() of de functie fullScreen() de eerste regel in setup() zijn.</p>
+<p>Opmerking: Variabelen die zijn gedeclareerd in setup() zijn niet toegankelijk binnen andere functies, waaronder draw().</p>
+</blockquote>
+<p><strong>Syntax</strong></p>
+<blockquote>
+<p>setup()</p>
+</blockquote>
+<p><strong>Retourneert</strong></p>
+<blockquote>
+<p>void</p>
+</blockquote>
+<h2 id="draw"><a class="header" href="#draw">draw()</a></h2>
+<p><strong>Beschrijving</strong></p>
+<blockquote>
+<p>Wordt direct na de setup() aangeroepen en voert continu de coderegels in het blok uit totdat het programma wordt gestopt of noLoop() wordt aangeroepen. draw() wordt automatisch aangeroepen en mag nooit expliciet worden aangeroepen. Het scherm wordt pas ververst nadat alle coderegels in de draw() zijn uitgevoerd.</p>
+<p>Het aantal keren dat draw() in elke seconde wordt uitgevoerd, kan worden geregeld met de functie frameRate().</p>
+<p>Het is gebruikelijk om background() aan te roepen aan het begin van de draw() lus om de inhoud van het venster te wissen. Het weglaten van background() kan onbedoelde resultaten opleveren, zoals afbeeldingen de blijven staan en waar vervolgens overheen getekend wordt.</p>
+<p>Er kan slechts één draw() -functie zijn voor elke programma en draw() moet bestaan als u wilt dat de code continu wordt uitgevoerd of als je gebeurtenissen zoals mousePressed() wilt verwerken. Soms heb je een lege draw() functie nodig om te tekenen in je programma, zoals onderstaand voorbeeld. In dit voorbeeld wordt er bij elke muisklik een cirkel, met diameter 50, getekend op de plek waar er geklikt is.</p>
+</blockquote>
+<pre><code class="language-java">void setup() {
+   size(200, 200);
+}
+
+// Ondanks dat de draw() hier leeg is, is die wel nodig, zodat het programma
+// user input kan verwerken (muiskliks in dit geval).
+
+void draw() {
+
+}
+
+void mousePressed() {
+   circle(mouseX, mouseY, 50);
+}
+</code></pre>
+<p><strong>Syntax</strong></p>
+<blockquote>
+<p>draw()</p>
+</blockquote>
+<p><strong>Retourneert</strong></p>
+<p>void</p>
+<p>&lt;&lt;Under construction&gt;&gt;</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-e-uitwerking-in-code"><a class="header" href="#bijlage-e-uitwerking-in-code">Bijlage E: Uitwerking in code</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
