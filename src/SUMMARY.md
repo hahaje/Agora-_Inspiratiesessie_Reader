@@ -1,4 +1,4 @@
-[Voorblad](voorblad.md)
+[](voorblad.md)
 
 # Inhoudsopgave
 -  [Inleiding](Inleiding.md)

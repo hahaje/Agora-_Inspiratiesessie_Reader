@@ -45,13 +45,13 @@ De functies die we gaan gebruiken zijn:
 **fill(r, g, b)** Deze functie bepaalt de kleur waarmee de daaropvolgende figuur of tekst wordt geschreven. Dus als je een zwarte cirkel wilt tekenen midden in het standaard scherm dan wordt het:
 
 > fill(0, 0, 0);\
-> circle(50, 50, 50);
+> circle(50, 50, 50);\
 > ![image19](images/image19.png)
 >
 > Een rode cirkel wordt dan:
 >
 > fill(255, 0, 0);\
-> circle(50, 50, 50);
+> circle(50, 50, 50);\
 > ![image20](images/image20.png)
 
 **circle(x, y, d)** Tekent een cirkel met diameter d op positie (x,y).
@@ -139,14 +139,12 @@ Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook ni
 ## Wiskundige operatoren
 
 In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
-
-**\+**,  optellen
-
-**\-**,  aftrekken
-
-**/**,  delen
-
-**\* **,  vermenigvuldigen
+|Operator|Betekenis|
+|---|---|
+|\+|optellen|
+|\-|aftrekken|
+|/|delen|
+|\*|vermenigvuldigen|
 
 Deze werken overigens alleen met getallen. Zo zal **println(10.2 + 3.5)** de volgende regel in de console printen:
 
@@ -245,17 +243,14 @@ Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot
 
 De volgende vergelijkingen zijn beschikbaar:
 
-**==**, is gelijk aan
-
-**\<**, is kleiner dan
-
-**\>**, is groter dan
-
-**\<=**, is kleiner of gelijk
-
-**\>=**, is groter of gelijk
-
-**!=**, is ongelijk aan (de ! kun je lezen als 'is niet')
+|Vergelijking|Betekenis|
+|---|---|
+|==|is gelijk aan|
+|\<|is kleiner dan|
+|\>|is groter dan|
+|\<=|is kleiner of gelijk|
+|\>=|is groter of gelijk|
+|!=|is ongelijk aan (de ! kun je lezen als 'is niet')|
 
 Ook is het mogelijk om het if-statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.
 
