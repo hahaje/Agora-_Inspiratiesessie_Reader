@@ -12,7 +12,7 @@ Probeer maar.
 
 Type **circle(50, 50, 50);** in de editor en klik op de Run-button. Het resultaat ziet er dan zo uit:
 
-|Uitvoer|
+|     |
 |:---:|
 |![image17](images/image17.png)|
 
@@ -48,12 +48,14 @@ De functies die we gaan gebruiken zijn:
 
 > fill(0, 0, 0);\
 > circle(50, 50, 50);\
+> &nbsp
 > ![image19](images/image19.png)
 >
 > Een rode cirkel wordt dan:
 >
 > fill(255, 0, 0);\
 > circle(50, 50, 50);\
+> &nbsp
 > ![image20](images/image20.png)
 
 **circle(x, y, d)** Tekent een cirkel met diameter d op positie (x,y).
