@@ -1,6 +1,4 @@
-Voordat je van start kan gaan, moet Processing eerst geïnstalleerd worden op je computer.
-
-# Stap 1: Processing downloaden
+## Stap 1: Processing downloaden
 
 Download de laatste versie van Processing (versie 4.0.1) via de volgende link: <https://processing.org/download>.
 
