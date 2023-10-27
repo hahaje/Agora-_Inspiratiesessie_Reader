@@ -9,6 +9,6 @@ Mischien heb je zelf weleens een zogeheten 'flipbook' gemaakt. In een blocnootje
 
 Zie voor een voorbeeld het volgende filmpje op Youtube:
 
-<iframe width="560" height="315" src="https://www.youtube.com/clip/UgkxbRU0nRxxQ91wEu8zQrtPYqCCNHbznKya" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/clip/UgkxbRU0nRxxQ91wEu8zQrtPYqCCNHbznKya?si=zRNL4gkYk5rOHVgl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Dit is in feite wat we ook doen als we een game programmeren. Steeds het scherm iets wijzigen en dan dit snel achter elkaar laten zien.
