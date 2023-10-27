@@ -15,4 +15,4 @@
 -  [Bijlage D: Processing Reference](bijlage-d.md)
 
 # Uitwerking
--  [Bijlage E: Uitwerking in code](bijlage-e-code-corona-chaser.md)
+-  [Bijlage E: Uitwerking in code](bijlage-e-code-corana-chaser.md)

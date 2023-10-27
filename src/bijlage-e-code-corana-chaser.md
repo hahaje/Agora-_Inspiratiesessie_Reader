@@ -1,6 +1,6 @@
-# Bijlage E: Code {#bijlage-e-code .unnumbered}
+# Bijlage E: Code Corona Chaser
 
-```Java
+```java
 //variabelen om de gegevens van de appel in te bewaren.
 float appelXPositie, appelYPositie, appelDiameter;
 

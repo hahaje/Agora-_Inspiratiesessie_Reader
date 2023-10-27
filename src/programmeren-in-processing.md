@@ -139,8 +139,9 @@ Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook ni
 ## Wiskundige operatoren
 
 In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
+
 |Operator|Betekenis|
-|---|---|
+|---|:---|
 |\+|optellen|
 |\-|aftrekken|
 |/|delen|
@@ -244,7 +245,7 @@ Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot
 De volgende vergelijkingen zijn beschikbaar:
 
 |Vergelijking|Betekenis|
-|---|---|
+|---|:---|
 |==|is gelijk aan|
 |\<|is kleiner dan|
 |\>|is groter dan|
