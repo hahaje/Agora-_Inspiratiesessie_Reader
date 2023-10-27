@@ -10,7 +10,7 @@ Je moet proberen aan het corona virus te ontkomen, en ondertussen zoveel mogelij
 
 **Simpel beginnen**
 
-Eerst zorgen dat alles functioneert, dan mooi maken met leuke plaatjes. In zijn meest simpele vorm ziet het spel er als volgt uit:
+Eerst zorgen we dat alles functioneert, dan mooi maken met leuke plaatjes. In zijn meest simpele vorm ziet het spel er als volgt uit:
 
 ![image13](images/image13.png)
 
@@ -18,11 +18,7 @@ Eerst zorgen dat alles functioneert, dan mooi maken met leuke plaatjes. In zijn 
 
 **Groene cirkel**: Corona virus. Deze komt automatisch op je af. En gaat steeds sneller bij verstrijken van de tijd.
 
-**Witte cirkel**: onze held, wordt bestuurd door middel van de muis (Op een mobiel zal dat via touch werken).
-
-Als onze held in aanraking komt met het virus (botst), is hij dood en eindigt het spel.
-
-Als onze held in aanraking komt met een appeltje gaat de score omhoog.
+**Witte cirkel**: onze held, wordt bestuurd door middel van de muis (Op een mobiel zal dat via touch werken). Als onze held in aanraking komt met het virus (botst), is hij dood en eindigt het spel. Als onze held in aanraking komt met een appeltje gaat de score omhoog.
 
 **Rode cirkel**: appeltje, deze verschijnt (spawned) op een willekeurige plek. Wanneer de held een appeltje 'opeet', verschijnt er onmiddellijk een nieuw appeltje op een willekeurige plek en wordt de score met 1 verhoogd.
 
@@ -54,7 +50,7 @@ Dit venster moet dus uiteindelijk ons spel worden!
 
 We moeten dus code-regels schrijven in de editor zodanig dat we uiteindelijk ons idee van de game kunnen realiseren. Om dat te kunnen doen moeten we eerst gaan bedenken welke stappen in welke volgorde we moeten gaan zetten om ons doel (game) te bereiken. Oftewel we moeten een **algoritme** bedenken.
 
-Er zijn meerdere wegen die naar Rome leiden, dus er is geen sprake van hét (juiste) algoritme. Ook kan het zijn dat het algoritme wat je hebt bedacht in de praktijk niet altijd handig is. Meestal gaat het dan om de volgorde van de stappen. Dus een algoritme helpt je, maar is niet heilig.
+Er zijn meerdere wegen die naar Rome leiden, dus er is geen sprake van **hét juiste** algoritme. Ook kan het zijn dat het algoritme wat je hebt bedacht in de praktijk niet altijd handig is. Meestal gaat het dan om de volgorde van de stappen. Dus een algoritme helpt je, maar is niet heilig.
 
 ## Algoritme
 

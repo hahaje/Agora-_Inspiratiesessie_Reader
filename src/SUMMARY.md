@@ -1,6 +1,6 @@
-# Inhoudsopgave
+[Voorblad](voorblad.md)
 
--  [Voorblad](voorblad.md)
+# Inhoudsopgave
 -  [Inleiding](Inleiding.md)
 -  [Voorbereiding](voorbereiding.md)
 -  [Beginnen met programmeren](beginnen-met-programmeren.md)
@@ -15,4 +15,4 @@
 -  [Bijlage D: Processing Reference](bijlage-d.md)
 
 # Uitwerking
--  [Bijlage E: Uitwerking in code](bijlage-e.md)
+-  [Bijlage E: Uitwerking in code](bijlage-e-code-corona-chaser.md)

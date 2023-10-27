@@ -8,17 +8,18 @@ Download de laatste versie van Processing (versie 4.0.1) via de volgende link: <
 
 ![image6](images/image6.png)
 
-Kies de download die geschikt is voor jou operating systeem. In de meeste gevallen is dit Windows. Om te bepalen of je de 64-bit of de 32-bit moet hebben, kun je de instructie in [Bijlage A][bijlage-a.md] raadplegen. In de meeste (nieuwere) laptops is dit 64-bit
+Kies de download die geschikt is voor jou operating systeem. In de meeste gevallen is dit Windows. Om te bepalen of je de 64-bit of de 32-bit moet hebben, kun je de instructie in [Bijlage A](bijlage-a.md) raadplegen. In de meeste (nieuwere) laptops is dit 64-bit
 
 
 ## Stap 2: Zipfile verplaatsen van Downloads naar map naar keuze
 
-Verplaats de gedownloade Zipfile (***processing-4.0.1-windows-x64.zip***) naar een map van je keuze, bij voorkeur naar ***C:\\Program Files*.** Verplaatsen van een bestand kan door het te verslepen naar de nieuwe directory of door te selecteren en dan **Ctrl-c** en naar de nieuwe directory te gaan en hier **Ctrl-v** doen.
+Verplaats de gedownloade Zipfile (***processing-4.0.1-windows-x64.zip***) naar een map van je keuze, bij voorkeur naar ***C:\\Program Files*.** 
+Verplaatsen van een bestand kan door het te verslepen naar de nieuwe directory of door te selecteren en dan **Ctrl-c** en naar de nieuwe directory te gaan en hier **Ctrl-v** doen.
 
 
 ## Stap 3: Uitpakken Zipfile
 
-Pak de Zip file hier uit. Zie [Bijlage B][bijlage-b.md], als je niet weet hoe je dat kunt doen.
+Pak de Zip file hier uit. Zie [Bijlage B](bijlage-b.md), als je niet weet hoe je dat kunt doen.
 
 
 ## Stap 4: Starten Processing
@@ -39,7 +40,7 @@ Normaal gezien zou je nu klaar zijn om een game te maken. Maar om uiteindelijk j
 Klik in de rechterbovenhoek op het vakje met **Java**, kies vervolgens voor **Manage Modes**...
 
 ![image7](images/image7.png)
-![image8](images/image7.png)
+![image8](images/image8.png)
 
 In het scherm dat vervolgens verschijnt, kies je voor **Anroid Mode for Processing 4**, en klik op de **Install** knop.
 

@@ -2,9 +2,9 @@
 
 ## Functies
 
-Zoals eerder gezegd hoef je veel dingen niet helemaal zelf te programmeren. Processing heeft al een hele hoop standaard 'dingen' beschikbaar. In de Reference ([Reference](https://processing.org/reference)) vind je deze terug.
+Zoals eerder gezegd hoef je veel dingen niet helemaal zelf te programmeren. Processing heeft al een hele hoop standaard 'dingen' beschikbaar. In de Reference ([Processing Reference](https://processing.org/reference)) vind je deze terug.
 
-Deze 'dingen' worden functies genoemd. Een functie is eigenlijk 1 of meer instructies die samen een bepaalde handeling uitvoeren. Het is makkelijker om dit duidelijk te maken met een voorbeeld.
+Deze 'dingen' worden functies genoemd. Een functie is eigenlijk 1 of meer instructies, die samen een bepaalde handeling uitvoeren. Het is makkelijker om dit duidelijk te maken met een voorbeeld.
 
 Neem bijvoorbeeld de functie **circle(x, y, d)**. Deze functie tekent een cirkel met als middelpunt (x,y) en diameter d.
 
@@ -22,7 +22,7 @@ Om de kleur en de rand van de cirkel te veranderen, bestaan er andere functies d
 
 Door andere waarden mee te geven, kun je cirkels van verschillende groottes en op verschillende posities tekenen. Aan deze functies kun je dus zelf **niets** veranderen door instructies toe te voegen.
 
-Processing heeft ook een aantal functies die je wel zelf invulling moet geven. De belangrijkste 2 functies zijn de **setup()** en de **draw().** Deze worden door Processing zelf aangeroepen, bij het starten en runnen van het programma. De setup() word eerst, eenmalig, uitgevoerd, hierin kun je dus dingen doen die eenmalig uitgevoerd moeten worden, zoals de grootte van het scherm opgeven. De draw() zorgt voor het tekenen van het venster, deze wordt dus 60 keer per seconde uitgevoerd. In de schermafbeelding op de volgende bladzijde zie je hoe dat eruit ziet.
+Processing heeft ook een aantal functies die je wel zelf invulling moet geven. De belangrijkste 2 functies zijn de **setup()** en de **draw().** Deze worden door Processing zelf aangeroepen, bij het starten en runnen van het programma. De **setup()** wordt eerst, eenmalig, uitgevoerd, hierin kun je dus dingen doen die eenmalig uitgevoerd moeten worden, zoals de grootte van het scherm opgeven. De **draw()** zorgt voor het tekenen van het venster, deze wordt dus 60 keer per seconde uitgevoerd. In de schermafbeelding op de volgende bladzijde zie je hoe dat eruit ziet.
 
 Wat er binnen deze functies uitgevoerd wordt, dat moeten we zelf programmeren. In deze functies komt het grootste gedeelte van ons algoritme terecht.
 
@@ -44,16 +44,14 @@ De functies die we gaan gebruiken zijn:
 
 **fill(r, g, b)** Deze functie bepaalt de kleur waarmee de daaropvolgende figuur of tekst wordt geschreven. Dus als je een zwarte cirkel wilt tekenen midden in het standaard scherm dan wordt het:
 
-> fill(0, 0, 0);
+> fill(0, 0, 0);\
 > circle(50, 50, 50);
-
 > ![image19](images/image19.png)
 >
 > Een rode cirkel wordt dan:
 >
-> fill(255, 0, 0);
+> fill(255, 0, 0);\
 > circle(50, 50, 50);
-
 > ![image20](images/image20.png)
 
 **circle(x, y, d)** Tekent een cirkel met diameter d op positie (x,y).
@@ -142,13 +140,13 @@ Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook ni
 
 In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
 
-\+,  optellen
+**\+**,  optellen
 
-\-,  aftrekken
+**\-**,  aftrekken
 
-/,  delen
+**/**,  delen
 
-\*,  vermenigvuldigen
+**\* **,  vermenigvuldigen
 
 Deze werken overigens alleen met getallen. Zo zal **println(10.2 + 3.5)** de volgende regel in de console printen:
 
@@ -157,12 +155,11 @@ Deze werken overigens alleen met getallen. Zo zal **println(10.2 + 3.5)** de vol
 Je kan natuurlijk ook berekening uitvoeren met variabelen, deze moeten dan wel van het type **int** of **float** zijn (er zijn nog meer standaard typen die getallen kunnen bevatten, maar die laten we even buiten beschouwing).
 
 De volgende code:
-
-**float getal1 = 10.2;**
-
-**float getal2 = 3.2;**
-
-**println(getal1 + getal2);**
+```java
+float getal1 = 10.2;
+float getal2 = 3.2;
+println(getal1 + getal2);
+```
 
 Levert dezelfde output op:
 
@@ -180,11 +177,11 @@ Let op: Zoals je ziet zonder spatie!
 
 Met variabelen, zou het als volgt eruit kunnen zien:
 
-**String groet = "Hello";**
-
-**String iedereen = "World";**
-
-**println(groet + iedereen);**
+```java
+String groet = "Hello";
+String iedereen = "World";
+println(groet + iedereen);
+```
 
 Dit levert dezelfde output op:
 
@@ -208,11 +205,11 @@ levert op
 
 Mooier is natuurlijk om dit behulp van een variabele te doen, dus:
 
-**int leeftijd;**
-
-**leeftijd = 13;**
-
-**println("Mijn leeftijd is: " + leeftijd);**
+```java
+int leeftijd;
+leeftijd = 13;
+println("Mijn leeftijd is: " + leeftijd);
+```
 
 Dit levert dezelfde output op, maar is flexibeler in gebruik. Ik hoef dan alleen de waarde van de variabele **leeftijd** te wijzigen, om een andere zin te printen.
 
@@ -248,19 +245,19 @@ Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot
 
 De volgende vergelijkingen zijn beschikbaar:
 
-== is gelijk aan
+**==**, is gelijk aan
 
-\< is kleiner dan
+**\<**, is kleiner dan
 
-\> is groter dan
+**\>**, is groter dan
 
-\<= is kleiner of gelijk
+**\<=**, is kleiner of gelijk
 
-\>= is groter of gelijk
+**\>=**, is groter of gelijk
 
-!= is ongelijk aan (de ! kun je lezen als 'is niet')
+**!=**, is ongelijk aan (de ! kun je lezen als 'is niet')
 
-Ook is het mogelijk om het if -- statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.
+Ook is het mogelijk om het if-statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.
 
 ```java
 if ( conditie ) {
@@ -297,9 +294,10 @@ In de wereld van de programmeurs is het gebruikelijk om bepaalde standaarden af 
 
 Variabelen worden in zogeheten camelCase geschreven. Dit betekent dat een naam van variabele altijd begint met een kleine letter en dat vervolgens ieder zelfstandig naamwoord in die naam begint met een hoofdletter, bijvoorbeeld
 
+```java
 int diameterCirkel;
-
 float gespaardBedrag;
+```
 
 Ook is het belangrijk om duidelijke namen te kiezen, bij voorkeur namen die iets zeggen over de waarde die je erin stopt. Zoals bovenstaande voorbeelden.
 
