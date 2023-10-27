@@ -1,0 +1,6 @@
+[book]
+authors = ["Herman Telman"]
+language = "en"
+multilingual = false
+src = "Lessons"
+title = "Object-Oriented Program Development"
