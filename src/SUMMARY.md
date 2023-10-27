@@ -28,7 +28,7 @@
    -  [De code](de-code.md)
    -  [Android modus](android-modus.md)
    -  [Gebruikte plaatjes](gebruikte-plaatjes.md)
-   -  [Aanvullingen / uitdagingen](aanvullinge-uitdagingen.md)
+   -  [Aanvullingen / uitdagingen](aanvullingen-uitdagingen.md)
 
 # Bijlagen
 -  [Bijlage A: Bepalen 64-bit of 32-bit](bijlage-a.md)

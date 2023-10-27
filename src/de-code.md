@@ -1,5 +1,5 @@
 # De code
-De code vind je in [bijlage E](bijlage-e.md).
+De code vind je in [bijlage E](bijlage-e-code-corana-chaser.md).
 
 Zorg ervoor dat je plaatjes in een directory staan met de naam ***data.***
 
