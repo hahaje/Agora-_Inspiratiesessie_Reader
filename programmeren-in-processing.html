@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="voorblad.html"></a></li><li class="chapter-item expanded affix "><li class="part-title">Inhoudsopgave</li><li class="chapter-item expanded "><a href="Inleiding.html"><strong aria-hidden="true">1.</strong> Inleiding</a></li><li class="chapter-item expanded "><a href="voorbereiding.html"><strong aria-hidden="true">2.</strong> Voorbereiding</a></li><li class="chapter-item expanded "><a href="beginnen-met-programmeren.html"><strong aria-hidden="true">3.</strong> Beginnen met programmeren</a></li><li class="chapter-item expanded "><a href="het-spel.html"><strong aria-hidden="true">4.</strong> Het spel</a></li><li class="chapter-item expanded "><a href="programmeren-in-processing.html" class="active"><strong aria-hidden="true">5.</strong> Programmeren in Processing</a></li><li class="chapter-item expanded "><a href="uitwerking.html"><strong aria-hidden="true">6.</strong> Uitwerking</a></li><li class="chapter-item expanded affix "><li class="part-title">Bijlagen</li><li class="chapter-item expanded "><a href="bijlage-a.html"><strong aria-hidden="true">7.</strong> Bijlage A: Bepalen 64-bit of 32-bit</a></li><li class="chapter-item expanded "><a href="bijlage-b.html"><strong aria-hidden="true">8.</strong> Bijlage B: Zipjes uitpakken</a></li><li class="chapter-item expanded "><a href="bijlage-c.html"><strong aria-hidden="true">9.</strong> Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></li><li class="chapter-item expanded "><a href="bijlage-d.html"><strong aria-hidden="true">10.</strong> Bijlage D: Processing Reference</a></li><li class="chapter-item expanded affix "><li class="part-title">Uitwerking</li><li class="chapter-item expanded "><a href="bijlage-e-code-corona-chaser.html"><strong aria-hidden="true">11.</strong> Bijlage E: Uitwerking in code</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="voorblad.html"></a></li><li class="chapter-item expanded affix "><li class="part-title">Inhoudsopgave</li><li class="chapter-item expanded "><a href="Inleiding.html"><strong aria-hidden="true">1.</strong> Inleiding</a></li><li class="chapter-item expanded "><a href="voorbereiding.html"><strong aria-hidden="true">2.</strong> Voorbereiding</a></li><li class="chapter-item expanded "><a href="beginnen-met-programmeren.html"><strong aria-hidden="true">3.</strong> Beginnen met programmeren</a></li><li class="chapter-item expanded "><a href="het-spel.html"><strong aria-hidden="true">4.</strong> Het spel</a></li><li class="chapter-item expanded "><a href="programmeren-in-processing.html" class="active"><strong aria-hidden="true">5.</strong> Programmeren in Processing</a></li><li class="chapter-item expanded "><a href="uitwerking.html"><strong aria-hidden="true">6.</strong> Uitwerking</a></li><li class="chapter-item expanded affix "><li class="part-title">Bijlagen</li><li class="chapter-item expanded "><a href="bijlage-a.html"><strong aria-hidden="true">7.</strong> Bijlage A: Bepalen 64-bit of 32-bit</a></li><li class="chapter-item expanded "><a href="bijlage-b.html"><strong aria-hidden="true">8.</strong> Bijlage B: Zipjes uitpakken</a></li><li class="chapter-item expanded "><a href="bijlage-c.html"><strong aria-hidden="true">9.</strong> Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></li><li class="chapter-item expanded "><a href="bijlage-d.html"><strong aria-hidden="true">10.</strong> Bijlage D: Processing Reference</a></li><li class="chapter-item expanded affix "><li class="part-title">Uitwerking</li><li class="chapter-item expanded "><a href="bijlage-e-code-corana-chaser.html"><strong aria-hidden="true">11.</strong> Bijlage E: Uitwerking in code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -263,13 +263,14 @@ void setup(){
 <p><strong>mousePressed</strong> hierin is opgeslagen of je de linker muis knop hebt ingedrukt of niet. Deze heeft dus de waarde <strong>true</strong> (er is op de linker button geklikt) of <strong>false</strong> (er is niet geklikt).</p>
 <p>Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook niet bovenin je programma op te schrijven.</p>
 <h2 id="wiskundige-operatoren"><a class="header" href="#wiskundige-operatoren">Wiskundige operatoren</a></h2>
-<p>In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
-|Operator|Betekenis|
-|---|---|
-|+|optellen|
-|-|aftrekken|
-|/|delen|
-|*|vermenigvuldigen|</p>
+<p>In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th style="text-align: left">Betekenis</th></tr></thead><tbody>
+<tr><td>+</td><td style="text-align: left">optellen</td></tr>
+<tr><td>-</td><td style="text-align: left">aftrekken</td></tr>
+<tr><td>/</td><td style="text-align: left">delen</td></tr>
+<tr><td>*</td><td style="text-align: left">vermenigvuldigen</td></tr>
+</tbody></table>
+</div>
 <p>Deze werken overigens alleen met getallen. Zo zal <strong>println(10.2 + 3.5)</strong> de volgende regel in de console printen:</p>
 <p><strong>13.7</strong></p>
 <p>Je kan natuurlijk ook berekening uitvoeren met variabelen, deze moeten dan wel van het type <strong>int</strong> of <strong>float</strong> zijn (er zijn nog meer standaard typen die getallen kunnen bevatten, maar die laten we even buiten beschouwing).</p>
@@ -325,13 +326,13 @@ println(&quot;Mijn leeftijd is: &quot; + leeftijd);
 </code></pre>
 <p>Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot de enkele =, die gebruikt wordt om een 'waarde toe te kennen' aan een variabele.</p>
 <p>De volgende vergelijkingen zijn beschikbaar:</p>
-<div class="table-wrapper"><table><thead><tr><th>Vergelijking</th><th>Betekenis</th></tr></thead><tbody>
-<tr><td>==</td><td>is gelijk aan</td></tr>
-<tr><td>&lt;</td><td>is kleiner dan</td></tr>
-<tr><td>&gt;</td><td>is groter dan</td></tr>
-<tr><td>&lt;=</td><td>is kleiner of gelijk</td></tr>
-<tr><td>&gt;=</td><td>is groter of gelijk</td></tr>
-<tr><td>!=</td><td>is ongelijk aan (de ! kun je lezen als 'is niet')</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Vergelijking</th><th style="text-align: left">Betekenis</th></tr></thead><tbody>
+<tr><td>==</td><td style="text-align: left">is gelijk aan</td></tr>
+<tr><td>&lt;</td><td style="text-align: left">is kleiner dan</td></tr>
+<tr><td>&gt;</td><td style="text-align: left">is groter dan</td></tr>
+<tr><td>&lt;=</td><td style="text-align: left">is kleiner of gelijk</td></tr>
+<tr><td>&gt;=</td><td style="text-align: left">is groter of gelijk</td></tr>
+<tr><td>!=</td><td style="text-align: left">is ongelijk aan (de ! kun je lezen als 'is niet')</td></tr>
 </tbody></table>
 </div>
 <p>Ook is het mogelijk om het if-statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.</p>

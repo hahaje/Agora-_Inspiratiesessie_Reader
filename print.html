@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="voorblad.html"></a></li><li class="chapter-item expanded affix "><li class="part-title">Inhoudsopgave</li><li class="chapter-item expanded "><a href="Inleiding.html"><strong aria-hidden="true">1.</strong> Inleiding</a></li><li class="chapter-item expanded "><a href="voorbereiding.html"><strong aria-hidden="true">2.</strong> Voorbereiding</a></li><li class="chapter-item expanded "><a href="beginnen-met-programmeren.html"><strong aria-hidden="true">3.</strong> Beginnen met programmeren</a></li><li class="chapter-item expanded "><a href="het-spel.html"><strong aria-hidden="true">4.</strong> Het spel</a></li><li class="chapter-item expanded "><a href="programmeren-in-processing.html"><strong aria-hidden="true">5.</strong> Programmeren in Processing</a></li><li class="chapter-item expanded "><a href="uitwerking.html"><strong aria-hidden="true">6.</strong> Uitwerking</a></li><li class="chapter-item expanded affix "><li class="part-title">Bijlagen</li><li class="chapter-item expanded "><a href="bijlage-a.html"><strong aria-hidden="true">7.</strong> Bijlage A: Bepalen 64-bit of 32-bit</a></li><li class="chapter-item expanded "><a href="bijlage-b.html"><strong aria-hidden="true">8.</strong> Bijlage B: Zipjes uitpakken</a></li><li class="chapter-item expanded "><a href="bijlage-c.html"><strong aria-hidden="true">9.</strong> Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></li><li class="chapter-item expanded "><a href="bijlage-d.html"><strong aria-hidden="true">10.</strong> Bijlage D: Processing Reference</a></li><li class="chapter-item expanded affix "><li class="part-title">Uitwerking</li><li class="chapter-item expanded "><a href="bijlage-e-code-corona-chaser.html"><strong aria-hidden="true">11.</strong> Bijlage E: Uitwerking in code</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="voorblad.html"></a></li><li class="chapter-item expanded affix "><li class="part-title">Inhoudsopgave</li><li class="chapter-item expanded "><a href="Inleiding.html"><strong aria-hidden="true">1.</strong> Inleiding</a></li><li class="chapter-item expanded "><a href="voorbereiding.html"><strong aria-hidden="true">2.</strong> Voorbereiding</a></li><li class="chapter-item expanded "><a href="beginnen-met-programmeren.html"><strong aria-hidden="true">3.</strong> Beginnen met programmeren</a></li><li class="chapter-item expanded "><a href="het-spel.html"><strong aria-hidden="true">4.</strong> Het spel</a></li><li class="chapter-item expanded "><a href="programmeren-in-processing.html"><strong aria-hidden="true">5.</strong> Programmeren in Processing</a></li><li class="chapter-item expanded "><a href="uitwerking.html"><strong aria-hidden="true">6.</strong> Uitwerking</a></li><li class="chapter-item expanded affix "><li class="part-title">Bijlagen</li><li class="chapter-item expanded "><a href="bijlage-a.html"><strong aria-hidden="true">7.</strong> Bijlage A: Bepalen 64-bit of 32-bit</a></li><li class="chapter-item expanded "><a href="bijlage-b.html"><strong aria-hidden="true">8.</strong> Bijlage B: Zipjes uitpakken</a></li><li class="chapter-item expanded "><a href="bijlage-c.html"><strong aria-hidden="true">9.</strong> Bijlage C: Ontwikkelaarsopties instellen op je telefoon</a></li><li class="chapter-item expanded "><a href="bijlage-d.html"><strong aria-hidden="true">10.</strong> Bijlage D: Processing Reference</a></li><li class="chapter-item expanded affix "><li class="part-title">Uitwerking</li><li class="chapter-item expanded "><a href="bijlage-e-code-corana-chaser.html"><strong aria-hidden="true">11.</strong> Bijlage E: Uitwerking in code</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -387,13 +387,14 @@ void setup(){
 <p><strong>mousePressed</strong> hierin is opgeslagen of je de linker muis knop hebt ingedrukt of niet. Deze heeft dus de waarde <strong>true</strong> (er is op de linker button geklikt) of <strong>false</strong> (er is niet geklikt).</p>
 <p>Deze variabelen krijg je cadeau, en hoef je dus niet zelf te maken en dus ook niet bovenin je programma op te schrijven.</p>
 <h2 id="wiskundige-operatoren"><a class="header" href="#wiskundige-operatoren">Wiskundige operatoren</a></h2>
-<p>In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:
-|Operator|Betekenis|
-|---|---|
-|+|optellen|
-|-|aftrekken|
-|/|delen|
-|*|vermenigvuldigen|</p>
+<p>In alle programmeertalen kun je ook wiskundige berekeningen uitvoeren. De belangrijkste voor nu zijn de onderstaande:</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th style="text-align: left">Betekenis</th></tr></thead><tbody>
+<tr><td>+</td><td style="text-align: left">optellen</td></tr>
+<tr><td>-</td><td style="text-align: left">aftrekken</td></tr>
+<tr><td>/</td><td style="text-align: left">delen</td></tr>
+<tr><td>*</td><td style="text-align: left">vermenigvuldigen</td></tr>
+</tbody></table>
+</div>
 <p>Deze werken overigens alleen met getallen. Zo zal <strong>println(10.2 + 3.5)</strong> de volgende regel in de console printen:</p>
 <p><strong>13.7</strong></p>
 <p>Je kan natuurlijk ook berekening uitvoeren met variabelen, deze moeten dan wel van het type <strong>int</strong> of <strong>float</strong> zijn (er zijn nog meer standaard typen die getallen kunnen bevatten, maar die laten we even buiten beschouwing).</p>
@@ -449,13 +450,13 @@ println(&quot;Mijn leeftijd is: &quot; + leeftijd);
 </code></pre>
 <p>Let op de dubbele ==, dit kun je lezen als 'is gelijk aan'. In tegenstelling tot de enkele =, die gebruikt wordt om een 'waarde toe te kennen' aan een variabele.</p>
 <p>De volgende vergelijkingen zijn beschikbaar:</p>
-<div class="table-wrapper"><table><thead><tr><th>Vergelijking</th><th>Betekenis</th></tr></thead><tbody>
-<tr><td>==</td><td>is gelijk aan</td></tr>
-<tr><td>&lt;</td><td>is kleiner dan</td></tr>
-<tr><td>&gt;</td><td>is groter dan</td></tr>
-<tr><td>&lt;=</td><td>is kleiner of gelijk</td></tr>
-<tr><td>&gt;=</td><td>is groter of gelijk</td></tr>
-<tr><td>!=</td><td>is ongelijk aan (de ! kun je lezen als 'is niet')</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Vergelijking</th><th style="text-align: left">Betekenis</th></tr></thead><tbody>
+<tr><td>==</td><td style="text-align: left">is gelijk aan</td></tr>
+<tr><td>&lt;</td><td style="text-align: left">is kleiner dan</td></tr>
+<tr><td>&gt;</td><td style="text-align: left">is groter dan</td></tr>
+<tr><td>&lt;=</td><td style="text-align: left">is kleiner of gelijk</td></tr>
+<tr><td>&gt;=</td><td style="text-align: left">is groter of gelijk</td></tr>
+<tr><td>!=</td><td style="text-align: left">is ongelijk aan (de ! kun je lezen als 'is niet')</td></tr>
 </tbody></table>
 </div>
 <p>Ook is het mogelijk om het if-statement uit te breiden met wat er zou moeten gebeuren als niet aan de conditie is voldaan.</p>
@@ -628,7 +629,188 @@ void mousePressed() {
 <p><strong>Retourneert</strong></p>
 <p>void</p>
 <p>&lt;&lt;Under construction&gt;&gt;</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-e-uitwerking-in-code"><a class="header" href="#bijlage-e-uitwerking-in-code">Bijlage E: Uitwerking in code</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bijlage-e-code-corona-chaser"><a class="header" href="#bijlage-e-code-corona-chaser">Bijlage E: Code Corona Chaser</a></h1>
+<pre><code class="language-java">//variabelen om de gegevens van de appel in te bewaren.
+float appelXPositie, appelYPositie, appelDiameter;
+
+//variabelen om de gegevens van de held in te bewaren.
+float heldXPositie, heldYPositie, heldDiameter;
+
+//variabelen om de gegevens van het virus in te bewaren.
+float virusXPositie, virusYPositie, virusDiameter;
+
+//variabelen om de gegevens van de knop in te bewaren.
+float knopX, knopY, knopBreedte, knopHoogte;
+
+//variabelen om de gegevens van de afbeeldingen in te bewaren.
+PImage held, virus, appel;
+
+//variabelen om de stap die het virus zet richting held in te bewaren
+float stapX, stapY;
+
+//variabele om de score in te bewaren.
+int score;
+
+//variabele om de snelheid waarmee het virus beweegt in te bewaren.
+int snelheid;
+
+//variabele om het aantal verstreken milliseconden in te bewaren.
+int vorigeVerstrekenMillis;
+
+//variabele om de text grootte in te bewaren.
+int textGrootte;
+
+//variabele om de status van het spel in te bewaren: is het spel afgelopen? waar of niet-waar //(true/false)
+boolean gameOver;
+
+void setup() {
+   size(400, 800); //Java modus
+
+   //fullScreen(); //Android modus
+   //orientation(PORTRAIT); //Android modus
+
+   //plaatjes inladen
+	held = loadImage(&quot;smiley.png&quot;);
+	appel = loadImage(&quot;appel.png&quot;);
+	virus = loadImage(&quot;corona.png&quot;);
+
+	//grootte en startpositie van de appel
+	appelDiameter = width/20;
+	appelXPositie = random(appelDiameter/2, width - appelDiameter/2);
+	appelYPositie = random(appelDiameter/2, height - appelDiameter/2);
+
+	//grootte en startpositie van de held
+	heldDiameter = width/8;
+	heldXPositie = mouseX;
+	heldYPositie = mouseY;
+
+	//grootte en startpositie van het virus
+	virusDiameter = width/13;
+	virusXPositie = 100;
+	virusYPositie = 100;
+
+	//positie en formaat van de 'try again' knop
+
+	knopX = width/2;
+	knopY = height - height/8;
+
+	knopBreedte = width / 3;
+	knopHoogte = height / 20;
+
+	//begin- score en snelheid
+	score = 0;
+	snelheid = 1;
+
+	//variabele om te kunnen bepalen of er al weer een bepaalde tijd is verstreken.
+
+	vorigeVerstrekenMillis = 0;
+
+	//variabele waarin bijgehouden wordt of het gameOver is (true) of niet (false)
+	//het spel begint natuurlijk met gameOver = false
+	gameOver = false;
+
+	//textgrootte hangt af va de breedte van het scherm.
+	//Wanneer je het scherm groter maakt, wordt de tekst ook groter.
+	textGrootte = width/8;
+
+}
+
+void draw() {
+   background(0, 0, 0);
+
+   //schrijf score
+   fill(255, 255, 255);
+   textSize(textGrootte);
+   textAlign(LEFT);
+   text(&quot;Score: &quot; + score, 10, height/10 - 10);
+
+   //teken held, eerst als cirkel, later als plaatje
+   //fill(255, 255, 0);
+   //circle(heldXPositie, heldYPositie, heldDiameter);
+   imageMode(CENTER);
+   image(held, heldXPositie, heldYPositie, heldDiameter, heldDiameter);
+
+   //teken virus, eerst als cirkel, later als plaatje
+   //fill(0, 255, 0);
+   //circle(virusXPositie, virusYPositie, virusDiameter);
+   imageMode(CENTER);
+   image(virus, virusXPositie, virusYPositie, virusDiameter, virusDiameter);
+
+   //teken appel, eerst als cirkel, later als plaatje
+   //fill(255, 0, 0);
+   //circle(appelXPositie, appelYPositie, appelDiameter);
+   imageMode(CENTER);
+   image(appel, appelXPositie, appelYPositie, appelDiameter, appelDiameter);
+
+   if (gameOver == false) {
+      //als held en appel botsen dan score + 1 en 'nieuwe' appel spawnen op willekeurige positie
+      heldXPositie = mouseX;
+      heldYPositie = mouseY;
+
+      if (dist(heldXPositie, heldYPositie, appelXPositie, appelYPositie) &lt;= (heldDiameter + appelDiameter)/2) {
+         score = score + 1;
+         appelXPositie = random(appelDiameter / 2, width - appelDiameter / 2);
+         appelYPositie = random(appelDiameter / 2, height - appelDiameter / 2);
+      }
+
+      //het virus komt een stape dichterbij. Hier wordt bepaald hoe groot en in welke richting
+      //de stap moet zijn
+      stapX = (heldXPositie - virusXPositie) / dist(heldXPositie, heldYPositie, virusXPositie, virusYPositie);
+      stapY = (heldYPositie - virusYPositie) / dist(heldXPositie, heldYPositie, virusXPositie, virusYPositie);
+
+      virusXPositie = virusXPositie + snelheid * stapX;
+      virusYPositie = virusYPositie + snelheid * stapY;
+
+      //als er 2 seconden zijn verstreken, dan wordt de snelheid van het virus iets opgehoogd
+      if (millis() - vorigeVerstrekenMillis &gt; 2000) {
+         snelheid = snelheid + 1;
+         vorigeVerstrekenMillis = millis();
+      }
+   }
+
+   //als de held botst met het virus, dan is het game over en wordt de \'try again\' knop getoond
+   if (dist(heldXPositie, heldYPositie, virusXPositie, virusYPositie) &lt;= (heldDiameter + virusDiameter)/2) {
+      gameOver = true;
+
+      //schrijf de tekst 'Game Over' in het midden van het scherm
+      fill(255, 0, 0);
+      textSize(textGrootte);
+      textAlign(CENTER, CENTER);
+      text(&quot;Game Over!&quot;, width / 2, height / 2);
+
+      //teken de 'try again' knop
+      fill(0, 255, 0);
+      rectMode(CENTER);
+      rect(knopX, knopY, knopBreedte, knopHoogte, 10);
+      textAlign(CENTER, CENTER);
+      textSize(knopBreedte / 5);
+      fill(0);
+      text(&quot;Try again&quot;, knopX, knopY);
+
+      //als er op de knop wordt geklikt en als de muis op de knop staat,
+      //dan wordt het spel opnieuw gestart.
+      if (mousePressed == true) {
+         if (mouseX &gt; knopX - knopBreedte / 2 &amp;&amp; mouseX &lt; knopX + knopBreedte / 2 &amp;&amp; 
+             mouseY &gt; knopY - knopHoogte / 2 &amp;&amp; mouseY &lt; knopY + knopHoogte / 2) {
+             
+            appelXPositie = random(appelDiameter / 2, width - appelDiameter / 2);
+            appelYPositie = random(appelDiameter / 2, height - appelDiameter / 2);
+
+            heldXPositie = mouseX;
+            heldYPositie = mouseY;
+
+            virusXPositie = 100;
+            virusYPositie = 100;
+
+            score = 0;
+            snelheid = 1;
+            vorigeVerstrekenMillis = 0;
+            gameOver = false;
+         }
+      }
+   }
+}
+</code></pre>
 
                     </main>
 
