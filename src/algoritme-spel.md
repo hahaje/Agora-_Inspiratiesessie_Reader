@@ -16,7 +16,7 @@
 
 8.  Als game-over dan schrijf de tekst "Game Over" in het midden van het scherm.
 
-9.  Als game-over, teken een knop (rechthoek met afgeronde hoeken) onderin het scherm (op ongeveer 1/10^de^ vanaf onderrand in het midden) met de tekst "try again" erin.
+9.  Als game-over, teken een knop (rechthoek met afgeronde hoeken) onderin het scherm (op ongeveer 1/10de vanaf onderrand in het midden) met de tekst "try again" erin.
 
 10. Laat het coronavirus een stap richting de held zetten.
 

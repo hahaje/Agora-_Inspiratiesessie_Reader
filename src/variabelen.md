@@ -16,9 +16,9 @@ De types die wij gaan gebruiken voor het spel zijn:
 
 > Let op: Processing is hoofdletter gevoelig, als je **Int** zou schrijven i.p.v. **int**, dan krijg je een foutmelding. **String** wordt, anders dan de andere types, met een hoofdletter geschreven. Dit is dus geen typefout. Waarom dit zo is, is op dit moment niet zo belangrijk.
 
--   **boolean** deze kan 2 waarden bevatten, **true** of **false** (waar of nietwaar). Een beetje
+-   **boolean** deze kan 2 waarden bevatten, **true** of **false** (waar of niet-waar).
 
-> een vreemde variabele misschien, maar deze is enorm handig in situaties, waarbij je afhankelijk van of iets waar of nietwaar is, iets wel of juist niet wil doen.
+> Een beetje een vreemde variabele misschien, maar deze is enorm handig in situaties, waarbij je afhankelijk van of iets waar of nietwaar is, iets wel of juist niet wil doen.
 
 -   **Pimage** hier kun je plaatjes in opslaan.
 

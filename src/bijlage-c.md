@@ -2,6 +2,8 @@
 
 Om een spelletje meteen van je computer op je telefoon te kunnen zetten, zonder app-store, moet je de ***Ontwikkelaarsopties*** activeren op je telefoon.
 
+> ***Let op: Als je Ouderlijk Toezicht aan hebt staan op je telefoon, dan is dit niet mogelijk.***
+
 De manier waarop je dit precies doet kan van merk tot merk verschillen. Hieronder staat de manier beschreven voor de Samsung Galaxy. Mocht je een ander type telefoon hebben, dan kan het zijn dat het iets anders in zijn werk gaat. In dat geval moet je even op internet zoeken naar de steekwoorden: Ontwikkelaarsopties, \<jouw merk/model telefoon\>.
 
 Voor een Samsung Galaxy:

@@ -18,7 +18,7 @@ Je kan natuurlijk ook berekening uitvoeren met variabelen, deze moeten dan wel v
 De volgende code:
 ```java
 float getal1 = 10.2;
-float getal2 = 3.2;
+float getal2 = 3.5;
 println(getal1 + getal2);
 ```
 
